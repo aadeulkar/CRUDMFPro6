@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% block title%}
+    <title>ADD STUDENT</title>
+{% endblock%}
+
+{% block content%}
+<div class="container shadow-lg p-3 mb-5 bg-body rounded">
+         <form method="post">
+             <h1>STUDENT REGISTRATION</h1>
+             {% csrf_token %}
+             {{ form.as_p }}
+             <input type="submit"value="ADD STUDENT" class="btn btn-success">
+             <input type="reset" value="RESET" class="btn btn-warning">
+
+         </form>
+</div>
+{% endblock %}
